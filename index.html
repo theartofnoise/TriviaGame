@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+
+    <script src="assets/javascript/app.js"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
+    
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css"> 
+    <title>Trivia-Time</title>
+</head>
+<body>
+        <div class="jumbotron text-center">
+                <h1 class="display-4">Trivia-
+                    Time!
+                </h1>
+                <br>
+                <br>
+                <button type="button" class="btn btn-primary" id="startButton">Start</button>
+        <section id="results">
+            <h3>You got <span id="rightAnswers"></span> right!</h3>
+            <h3>You got <span id="wrongAnswers"></span> wrong!</h3>
+            <button id="tryAgain">Try Again!</button>
+        </section>
+        <section id="main">
+            <h2 id="timer"></h2>
+                <h3 id="questions">What singer holds the world record for most words in a hit single?</h3>
+                <input type="radio" name="answer1">50 Cent<br>
+                <input type="radio" name="answer1">Kanye West<br>
+                <input type="radio" name="answer1">Twista<br>
+                <input type="radio" name="answer1" data-type="correct">Eminem<br>
+                <hr>
+                <h3 id="questions">How much pressure do the strings in a grand piano exert on the frame?</h3>
+                <input type="radio" name="answer2">3 Tons<br>
+                <input type="radio" name="answer2">3 lbs<br>
+                <input type="radio" name="answer2">300 lbs<br>
+                <input type="radio" name="answer2" data-type="correct">30 Tons<br>
+                <hr>
+                <h3 id="questions"></h3>
+                <input type="radio" name="answer3"><br>
+                <input type="radio" name="answer3"><br>
+                <input type="radio" name="answer3"><br>
+                <input type="radio" name="answer3"><br>
+                <hr>
+            <button id="done">Done</button>
+
+        </section>
+                
+
+                
+                
+                
+                
+              </div>
+
+    
+</body>
+</html>
