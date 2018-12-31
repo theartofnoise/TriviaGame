@@ -1,0 +1,25 @@
+.display-4, #timer {
+    font-family: 'Pacifico', cursive;
+    text-shadow: 0 0 87px #000;
+    
+}
+button {
+    box-shadow: 0 0 87px #000;
+}
+#main {
+    font-family: 'Indie Flower', cursive;
+    text-shadow: 0 0 87px #000;
+}
+html {
+    background-image: url(../images/musicBG.jpg);
+} 
+.jumbotron {
+    margin-bottom: 2rem;
+    background-color: rgb(189, 255, 181,0.9);
+    border-radius: 0px; 
+    border: solid black 1px;
+    color: rgb(67, 18, 245);
+}
+body {
+    background-color: transparent;
+}

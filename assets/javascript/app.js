@@ -1,87 +1,87 @@
 
 
-$(document).ready (function () {
+$(document).ready(function () {
     var totalQuestions = 5;
     var correctAnswers = 0;
     var wrongAnswers = 0;
-    var unansweredQuestions = 0;
     var answered = 0;
+    var timer;
     gameStart();
-    
-    // hides results, main and shows start
-    function gameStart(){
-        $("#startButton").show();
 
+    // hides results, main and shows start
+    function gameStart() {
+        $("#startButton").show();
         $("#timer").hide();
         $("#main").hide();
         $("#results").hide();
-        var ele = document.getElementsByName("input");
-        for(var i=0;i<ele.length;i++)
-        ele[i].checked = false;
-        
+
+
     };
-    
+
+    //clear radios and answers****************
+    function restart() {
+        $('input:radio').prop('checked', false);
+        correctAnswers = 0;
+        wrongAnswers = 0;
+        answered = 0;
+    };
+
     //starts trivia shows main, starts timer
-    $("#startButton").on("click", function(){
+    $("#startButton").on("click", function () {
         $("#startButton").hide();
-        $("#main").show();
+        $("#main").show(1000);
         $("#timer").show();
         //starts timers
         startTimer();
-
     });
+
+    //try again button
+    $("#tryAgain").on("click", function () {
+        gameStart();
+        restart();
+    });
+
+    //done button 
+    $("#done").on("click", function () {
+        //***checks answers
+        $('input:radio').each(function () {
+            if ($(this).is(':checked') && ($(this).val() == "correct")) {
+                correctAnswers++;
+                answered++;
+                console.log("right " + correctAnswers);
+            }
+            else if ($(this).is(':checked')) {
+                wrongAnswers++;
+                answered++;
+                console.log("wrong " + wrongAnswers);
+            }
+        });
+        done();
+    });
+
+    //done function
+    function done() {
+        clearInterval(timer);
+        $("#main").hide();
+        $("#results").show();
+        $("#rightAnswers").text(correctAnswers);
+        $("#wrongAnswers").text(wrongAnswers);
+        $("#unansweredQuestions").text(totalQuestions - answered);
+
+    };
+
     // how much time and timer
-    function startTimer(){
+    function startTimer() {
         var time = 15;
-        $("#timer").text("Time Left: "+time);
-        var timer = setInterval(function(){
+        $("#timer").text("Time Left: " + time);
+        timer = setInterval(function () {
             time--;
-            $("#timer").text("Time Left: "+time);
-            if (time===0)
-            {
+            $("#timer").text("Time Left: " + time);
+            if (time === 0) {
                 clearInterval(timer);
                 alert("Times Up!");
                 done();
             }
         }, 1000);
-
-        //radio checker
-        $('input[type="radio"]').change(function() {
-            if($(this).val()=="correct"){
-                correctAnswers++;
-                answered++;
-                console.log("right "+correctAnswers);
-            } else {
-                wrongAnswers++;
-                answered++;
-                console.log("wrong "+wrongAnswers);
-            }
-
-        });
-        
-        //done button
-        $("#done").on("click", function(){
-            done();
-            
-        });
-        //done function
-        function done() {
-            clearInterval(timer);           
-            $("#main").hide();
-            $("#results").show();
-            $("#rightAnswers").text(correctAnswers);
-            $("#wrongAnswers").text(wrongAnswers);
-            $("#unansweredQuestions").text(totalQuestions-answered);
-
-
-        };
-        $("#tryAgain").on("click", function(){
-            //clear radios ****************
-            $('input[type="radio"]').attr('checked',false);
-            correctAnswers = 0;
-            wrongAnswers = 0;
-            answered = 0;
-            gameStart();
-        })
     };
-    });
+});
