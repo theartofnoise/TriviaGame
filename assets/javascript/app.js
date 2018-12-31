@@ -6,6 +6,7 @@ $(document).ready(function () {
     var wrongAnswers = 0;
     var answered = 0;
     var timer;
+    var time = 80;
     gameStart();
 
     // hides results, main and shows start
@@ -75,7 +76,6 @@ $(document).ready(function () {
 
     // how much time and timer
     function startTimer() {
-        var time = 60;
         $("#timer").text("Time Left: " + time);
         timer = setInterval(function () {
             time--;
