@@ -1,101 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-      crossorigin="anonymous"
-    />
-    <script
-      src="https://code.jquery.com/jquery-3.3.1.min.js"
-      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-      crossorigin="anonymous"
-    ></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
 
-    <link
-      href="https://fonts.googleapis.com/css?family=Indie+Flower|Pacifico"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Pacifico" rel="stylesheet" />
 
     <script src="assets/javascript/app.js"></script>
 
-    <link
-      href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
     <title>Trivia-Time</title>
-  </head>
-  <body>
-    <div class="jumbotron background text-center">
-      <h1 class="display-4">Trivia-Time!</h1>
-      <br />
-      <br />
-      <button type="button" class="btn btn-primary" id="startButton">
-        Start
-      </button>
-      <h2 id="timer"></h2>
-      <section id="results">
-        <h3>You got <span id="rightAnswers"></span> right!</h3>
-        <h3>You got <span id="wrongAnswers"></span> wrong!</h3>
-        <h3 id="allQuestions">
-          You unanswered <span id="unansweredQuestions"></span> questions!
-        </h3>
-        <button id="tryAgain" class="btn btn-primary">Try Again!</button>
-      </section>
-      <fieldset id="main">
-        <h3 id="questions">
-          What singer holds the world record for most words in a hit single?
-        </h3>
-        <input type="radio" name="answer1" />50 Cent<br />
-        <input type="radio" name="answer1" />Kanye West<br />
-        <input type="radio" name="answer1" />Twista<br />
-        <input type="radio" name="answer1" value="correct" />Eminem<br />
-        <hr />
-        <h3 id="questions">
-          How much pressure do the strings in a grand piano exert on the frame?
-        </h3>
-        <input type="radio" name="answer2" />3 Tons<br />
-        <input type="radio" name="answer2" />3 lbs<br />
-        <input type="radio" name="answer2" />300 lbs<br />
-        <input type="radio" name="answer2" value="correct" />30 Tons<br />
-        <hr />
-        <h3 id="questions">
-          What member of the Red Hot Chili Peppers grew up with Cher as his
-          babysitter?
-        </h3>
-        <input type="radio" name="answer3" value="correct" />Anthony Kiedis<br />
-        <input type="radio" name="answer3" />Flea<br />
-        <input type="radio" name="answer3" />Chad Smith<br />
-        <input type="radio" name="answer3" />Josh Klinghoffer<br />
-        <hr />
-        <h3 id="questions">
-          Who holds the record for the shortest song ever recorded?
-        </h3>
-        <input type="radio" name="answer4" />David Bowie<br />
-        <input type="radio" name="answer4" />The Beatles<br />
-        <input type="radio" name="answer4" value="correct" />Napalm Death<br />
-        <input type="radio" name="answer4" />Beyonc&eacute;<br />
-        <hr />
-        <h3 id="questions">
-          Which famous celebrity dated Taylor Swift, and is rumored to be the ex
-          in her song, "We Are Never Getting Back Together"?
-        </h3>
-        <input type="radio" name="answer5" />John Mayer<br />
-        <input type="radio" name="answer5" value="correct" />Jake Gyllenhaal<br />
-        <input type="radio" name="answer5" />Joe Johnas<br />
-        <input type="radio" name="answer5" />Jack Black<br />
-        <!--<hr>
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron background text-center">
+            <h1 class="display-4">Trivia-Time!</h1>
+            <br />
+            <br />
+            <button type="button" class="btn btn-primary" id="startButton">
+                Start
+            </button>
+            <h2 id="timer"></h2>
+            <section id="results">
+                <h3>You got <span id="rightAnswers"></span> right!</h3>
+                <h3>You got <span id="wrongAnswers"></span> wrong!</h3>
+                <h3 id="allQuestions">
+                    You unanswered <span id="unansweredQuestions"></span> questions!
+                </h3>
+                <button id="tryAgain" class="btn btn-primary">Try Again!</button>
+            </section>
+            <fieldset id="main">
+                <h3 id="questions">
+                    What singer holds the world record for most words in a hit single?
+                </h3>
+                <input type="radio" name="answer1" />50 Cent<br />
+                <input type="radio" name="answer1" />Kanye West<br />
+                <input type="radio" name="answer1" />Twista<br />
+                <input type="radio" name="answer1" value="correct" />Eminem<br />
+                <hr />
+                <h3 id="questions">
+                    How much pressure do the strings in a grand piano exert on the frame?
+                </h3>
+                <input type="radio" name="answer2" />3 Tons<br />
+                <input type="radio" name="answer2" />3 lbs<br />
+                <input type="radio" name="answer2" />300 lbs<br />
+                <input type="radio" name="answer2" value="correct" />30 Tons<br />
+                <hr />
+                <h3 id="questions">
+                    What member of the Red Hot Chili Peppers grew up with Cher as his
+                    babysitter?
+                </h3>
+                <input type="radio" name="answer3" value="correct" />Anthony Kiedis<br />
+                <input type="radio" name="answer3" />Flea<br />
+                <input type="radio" name="answer3" />Chad Smith<br />
+                <input type="radio" name="answer3" />Josh Klinghoffer<br />
+                <hr />
+                <h3 id="questions">
+                    Who holds the record for the shortest song ever recorded?
+                </h3>
+                <input type="radio" name="answer4" />David Bowie<br />
+                <input type="radio" name="answer4" />The Beatles<br />
+                <input type="radio" name="answer4" value="correct" />Napalm Death<br />
+                <input type="radio" name="answer4" />Beyonc&eacute;<br />
+                <hr />
+                <h3 id="questions">
+                    Which famous celebrity dated Taylor Swift, and is rumored to be the ex
+                    in her song, "We Are Never Getting Back Together"?
+                </h3>
+                <input type="radio" name="answer5" />John Mayer<br />
+                <input type="radio" name="answer5" value="correct" />Jake Gyllenhaal<br />
+                <input type="radio" name="answer5" />Joe Johnas<br />
+                <input type="radio" name="answer5" />Jack Black<br />
+                <!--<hr>
                 <h3 id="questions"></h3>
                 <input type="radio" name="answer3"><br>
                 <input type="radio" name="answer3"><br>
@@ -125,10 +112,25 @@
                 <input type="radio" name="answer3"><br>
                 <input type="radio" name="answer3"><br>
                 <input type="radio" name="answer3">--><br />
-        <hr />
-        <br />
-        <button id="done" class="btn btn-primary">Done</button>
-      </fieldset>
+                <hr />
+                <br />
+                <button id="done" class="btn btn-primary">Done</button>
+            </fieldset>
+            <footer class="text-center">
+                <div class="card-header">
+                    <div>
+
+                        <h3 class="card-text">Thank you for playing</h3>
+                        <a href="https://theartofnoise.github.io/Bootstrap-Portfolio/portfolio.html" class="shadow btn btn btn-outline-dark">More</a>
+                        <br>
+                    </div>
+                    <div>
+                        Arthur Granquist&copy;
+                    </div>
+                </div>
+            </footer>
+        </div>
     </div>
-  </body>
+</body>
+
 </html>

@@ -1,3 +1,9 @@
+
+html {
+    padding: 0px;
+    position: relative;
+    min-height: 100%;
+}
 .display-4, #timer {
     font-family: 'Pacifico', cursive;
     text-shadow: 0 0 87px #000;
@@ -10,8 +16,9 @@ button {
     font-family: 'Indie Flower', cursive;
     text-shadow: 0 0 87px #000;
 }
-html {
+body {
     background-image: url(../images/musicBG.jpg);
+    margin-bottom: 153px;
 } 
 .jumbotron {
     margin-bottom: 2rem;
@@ -19,7 +26,27 @@ html {
     border-radius: 0px; 
     border: solid black 1px;
     color: rgb(67, 18, 245);
+    width: 100%;
 }
-body {
+/* body {
     background-color: transparent;
+    
+} */
+.btn-primary {
+    color: #fff;
+    background-color: rgb(67, 18, 245);
+    border-color: rgb(67, 18, 245);
+    
+}
+.btn {
+    margin-bottom: 12px;
+}
+footer {
+    position: absolute;
+    bottom: 0px;
+    left: 0%;
+    width: 100%;
+    border-radius: 0rem;
+    color: rgb(0, 0, 0);
+    
 }
