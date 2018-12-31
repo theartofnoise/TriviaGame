@@ -1,7 +1,7 @@
 
 
 $(document).ready(function () {
-    var totalQuestions = 5;
+    var totalQuestions = 10;
     var correctAnswers = 0;
     var wrongAnswers = 0;
     var answered = 0;
