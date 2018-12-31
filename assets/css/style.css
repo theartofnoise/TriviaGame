@@ -4,9 +4,9 @@
     
 }
 button {
-    box-shadow: 0 0 87px #000;
+    box-shadow: 0 0 67px #000;
 }
-#main {
+#main, h3 {
     font-family: 'Indie Flower', cursive;
     text-shadow: 0 0 87px #000;
 }

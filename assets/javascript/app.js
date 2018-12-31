@@ -67,12 +67,15 @@ $(document).ready(function () {
         $("#rightAnswers").text(correctAnswers);
         $("#wrongAnswers").text(wrongAnswers);
         $("#unansweredQuestions").text(totalQuestions - answered);
+        if (answered===totalQuestions) {
+            $("#allQuestions").hide();
+        }
 
     };
 
     // how much time and timer
     function startTimer() {
-        var time = 15;
+        var time = 60;
         $("#timer").text("Time Left: " + time);
         timer = setInterval(function () {
             time--;
