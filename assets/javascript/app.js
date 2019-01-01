@@ -15,6 +15,7 @@ $(document).ready(function () {
         $("#timer").hide();
         $("#main").hide();
         $("#results").hide();
+        $("#winning").hide();
 
 
     };
@@ -52,6 +53,7 @@ $(document).ready(function () {
                 console.log("right " + correctAnswers);
             }
             else if ($(this).is(':checked')) {
+                //$(this).
                 wrongAnswers++;
                 answered++;
                 console.log("wrong " + wrongAnswers);
@@ -73,7 +75,9 @@ $(document).ready(function () {
             $("#allQuestions").hide();
         }
         if (correctAnswers===10) {
-            alert("You got them all correct!!!! You must have played this before! lol");
+            //alert("You got them all correct!!!! You must have played this before! lol");
+            $("#winning").show();
+            //console.log("fuxkin perf?!")
         }
 
     };

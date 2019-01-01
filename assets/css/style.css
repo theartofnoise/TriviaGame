@@ -32,10 +32,19 @@ body {
     color: rgb(67, 18, 245);
     width: 100%;
 }
-/* body {
-    background-color: transparent;
-    
-} */
+@keyframes example {
+    0%   {width :120%; height: 120%; left:0px; top:0px;}
+    25%  {width :-120%; height: -120%; left:200px; top:0px;}
+    50%  {width :120%; height: 120%; left:-200px; top:0px;}
+    75%  {width :-120%; height: -120%; left:200px; top:0px;}
+    100% {background-color:red; left:0px; top:0px;}
+  }
+  img {
+    position: relative;
+    width: 100%;
+    animation-name: example;
+    animation-duration: 4s;
+  }
 .btn-primary {
     color: #fff;
     background-color: rgb(67, 18, 245);
