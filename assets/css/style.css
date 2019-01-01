@@ -19,7 +19,7 @@ button {
 body {
     background-image: url(../images/musicBG.jpg);
     margin-bottom: 153px;
-    background-size: 100%;
+    background-repeat:repeat-y;
 } 
 .container {
     margin-top: 15px;
