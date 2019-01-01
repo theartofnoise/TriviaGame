@@ -51,6 +51,9 @@ footer {
     left: 0%;
     width: 100%;
     border-radius: 0rem;
-    color: rgb(0, 0, 0);
+    color: rgb(230, 230, 230);
+}
+.card-header {
     
+    background-color: rgba(0,0,0,.53);
 }
