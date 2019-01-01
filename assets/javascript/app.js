@@ -56,6 +56,7 @@ $(document).ready(function () {
                 answered++;
                 console.log("wrong " + wrongAnswers);
             }
+            
         });
         done();
     });
@@ -70,6 +71,9 @@ $(document).ready(function () {
         $("#unansweredQuestions").text(totalQuestions - answered);
         if (answered===totalQuestions) {
             $("#allQuestions").hide();
+        }
+        if (correctAnswers===10) {
+            alert("You got them all correct!!!! You must have played this before! lol");
         }
 
     };
