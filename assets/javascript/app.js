@@ -6,7 +6,8 @@ $(document).ready(function () {
     var wrongAnswers = 0;
     var answered = 0;
     var timer;
-    var time = 80;
+    var startTime = 120
+    var time = startTime;
     gameStart();
 
     // hides results, main and shows start
@@ -33,6 +34,7 @@ $(document).ready(function () {
         $("#startButton").hide();
         $("#main").show(1000);
         $("#timer").show();
+        time = startTime;
         //starts timers
         startTimer();
     });
@@ -43,6 +45,19 @@ $(document).ready(function () {
         restart();
     });
 
+    // how much time and timer
+    function startTimer() {
+        $("#timer").text("Time Left: " + time);
+        timer = setInterval(function() {
+            time--;
+            $("#timer").text("Time Left: " + time);
+            if (time === 0) {
+                clearInterval(timer);
+                alert("Times Up!");
+                done();
+            }
+        }, 1000);
+    };
     //done button 
     $("#done").on("click", function () {
         //***checks answers
@@ -77,22 +92,8 @@ $(document).ready(function () {
         if (correctAnswers===10) {
             //alert("You got them all correct!!!! You must have played this before! lol");
             $("#winning").show();
-            //console.log("fuxkin perf?!")
         }
 
     };
 
-    // how much time and timer
-    function startTimer() {
-        $("#timer").text("Time Left: " + time);
-        timer = setInterval(function () {
-            time--;
-            $("#timer").text("Time Left: " + time);
-            if (time === 0) {
-                clearInterval(timer);
-                alert("Times Up!");
-                done();
-            }
-        }, 1000);
-    };
 });
