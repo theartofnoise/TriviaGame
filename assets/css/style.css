@@ -54,6 +54,8 @@ footer {
     color: rgb(230, 230, 230);
 }
 .card-header {
-    
     background-color: rgba(0,0,0,.53);
+}
+.facts {
+    color: #bd2130;
 }
