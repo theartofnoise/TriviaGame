@@ -16,30 +16,31 @@ $(document).ready(function() {
     $("#main").hide();
     $("#results").hide();
     $("#winning").hide();
-};
+  }
 
-//clear radios and answers****************
-function restart() {
+  //clear radios and answers****************
+  function restart() {
     $("input:radio").prop("checked", false);
     correctAnswers = 0;
     wrongAnswers = 0;
     answered = 0;
-}
+  }
 
-//starts trivia shows main, starts timer
-$("#startButton").on("click", function() {
+  //starts trivia shows main, starts timer
+  $("#startButton").on("click", function() {
     //$(".facts").hide();
-            if ((cheater === true)) {
-                $(".facts").show(1000);
-            } else {
-                $(".facts").hide();
-            }
+    if (cheater === true) {
+      $(".facts").show(1000);
+      $("#timer").text("No Timer");
+    } else {
+      $(".facts").hide();
+      time = startTime;
+      startTimer();
+    }
+    $("#timer").show();
     $("#startButton").hide();
     $("#main").show(1000);
-    $("#timer").show();
-    time = startTime;
     //starts timers
-    startTimer();
   });
 
   //try again button
