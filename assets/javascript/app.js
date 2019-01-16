@@ -28,7 +28,7 @@ $(document).ready(function() {
 
   //starts trivia shows main, starts timer
   $("#startButton").on("click", function() {
-    //$(".facts").hide();
+    
     if (cheater === true) {
       $(".facts").show(1000);
       $("#timer").text("No Timer");
@@ -77,11 +77,9 @@ $(document).ready(function() {
       if ($(this).is(":checked") && $(this).val() == "correct") {
         correctAnswers++;
         answered++;
-        console.log("right " + correctAnswers);
       } else if ($(this).is(":checked")) {
         wrongAnswers++;
         answered++;
-        console.log("wrong " + wrongAnswers);
       }
     });
     done();
